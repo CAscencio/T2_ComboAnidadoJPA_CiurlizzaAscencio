@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="body">
+            <h:form>
+                <p:panelGrid columns="2" >
+                    <p:outputLabel value="Departamento:" />
+                    <p:selectOneMenu id="Departamento" value="#{provinciaController.departamento.coddepart}" style="width:125px">
+                        <f:selectItem itemLabel="Select One" itemValue="" />
+                        <f:selectItems value="#{departamentoController.items}" 
+                                       var="lista" 
+                                       itemLabel="#{lista.nomdepart}" itemValue="#{lista.coddepart}"/>
+                        <p:ajax listener="#{provinciaController.dataProvincia()}" update="Provincia"/>
+                    </p:selectOneMenu>
+                    <p:outputLabel value="Provincia:" />
+                    <p:selectOneMenu id="Provincia" value="" style="width:125px">
+                        <f:selectItem itemLabel="Select One" itemValue="" />
+                        <f:selectItems value="#{provinciaController.listaCombo}" 
+                                       var="lista" 
+                                       itemLabel="#{lista.nomprov}" itemValue="#{lista.codprov}"/>
+                    </p:selectOneMenu>
+                    <p:outputLabel value="Distrito:" />
+                    <p:selectOneMenu id="Distrito" value="" style="width:125px">
+                        <f:selectItem itemLabel="Select One" itemValue="" />
+                        <f:selectItems value="#{departamentoController.items}" 
+                                       var="lista" 
+                                       itemLabel="#{lista.nomdepart}" itemValue="#{lista.coddepart}"/>
+                    </p:selectOneMenu>
+                </p:panelGrid>
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
+
