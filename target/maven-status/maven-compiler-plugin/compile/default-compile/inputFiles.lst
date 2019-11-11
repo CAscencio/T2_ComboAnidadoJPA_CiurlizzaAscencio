@@ -1,11 +1,11 @@
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\modelo\entity\Departamento.java
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\modelo\dao\DistritoFacade.java
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\modelo\entity\Distrito.java
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\modelo\entity\Provincia.java
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\controller\DepartamentoController.java
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\controller\ProvinciaController.java
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\controller\DistritoController.java
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\modelo\dao\DepartamentoFacade.java
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\modelo\dao\AbstractFacade.java
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\controller\util\JsfUtil.java
-C:\Users\Usuario\Documents\NetBeansProjects\ComboAnidadoJPA\src\main\java\modelo\dao\ProvinciaFacade.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\modelo\dao\DepartamentoFacade.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\modelo\entity\Provincia.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\controller\DepartamentoController.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\controller\DistritoController.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\modelo\dao\DistritoFacade.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\controller\util\JsfUtil.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\modelo\dao\AbstractFacade.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\modelo\entity\Departamento.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\controller\ProvinciaController.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\modelo\dao\ProvinciaFacade.java
+C:\Users\Admin\Videos\Nueva carpeta\T2_ComboAnidadoJPA_CiurlizzaAscencio\src\main\java\modelo\entity\Distrito.java

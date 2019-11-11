@@ -25,7 +25,7 @@ public class DistritoFacade extends AbstractFacade<Distrito> {
     }
     
     public List<Distrito> listaDistrito(int Codigo) {
-        String jpql = "SELECT d FROM Distrito JOIN d.codprov p WHERE p.codprov = :codprov";
+        String jpql = "SELECT d FROM Distrito d JOIN d.codprov p WHERE p.codprov = :codprov";
         Query cq = em.createQuery(jpql, super.getClass());
         cq.setParameter("codprov", Codigo);
         return cq.getResultList();

@@ -188,11 +188,8 @@ public class ProvinciaController implements Serializable {
     
 
     public List<Provincia> dataProvincia() {
-        System.out.println("ENTRE AL METODO");
         listaCombo = new ArrayList();
-        System.out.println("CODIGO :" +departamento.getCoddepart());
         listaCombo = getFacade().listaDepartamento(departamento.getCoddepart());
-        System.out.println("DATOS :" +listaCombo.toString());
         return listaCombo;
     }
 

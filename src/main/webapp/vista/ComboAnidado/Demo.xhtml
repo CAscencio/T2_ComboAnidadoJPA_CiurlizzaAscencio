@@ -18,14 +18,19 @@
                                        itemLabel="#{lista.nomdepart}" itemValue="#{lista.coddepart}"/>
                         <p:ajax listener="#{provinciaController.dataProvincia()}" update="Provincia"/>
                     </p:selectOneMenu>
+                    
+                    
                     <p:outputLabel value="Provincia:" />
-                    <p:selectOneMenu id="Provincia" value="" style="width:125px">
+                    <p:selectOneMenu id="Provincia" value="#{distritoController.provincia.codprov}" style="width:125px">
                         <f:selectItem itemLabel="Select One" itemValue="" />
                         <f:selectItems value="#{provinciaController.listaCombo}" 
                                        var="lista" 
                                        itemLabel="#{lista.nomprov}" itemValue="#{lista.codprov}"/>
                         <p:ajax listener="#{distritoController.dataDistrito()}" update="Distrito"/>
                     </p:selectOneMenu>
+                    
+                    
+                    
                     <p:outputLabel value="Distrito:" />
                     <p:selectOneMenu id="Distrito" value="" style="width:125px">
                         <f:selectItem itemLabel="Select One" itemValue="" />

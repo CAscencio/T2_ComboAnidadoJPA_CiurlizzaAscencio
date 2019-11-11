@@ -187,11 +187,8 @@ public class DistritoController implements Serializable {
     }
     
     public List<Distrito> dataDistrito() {
-        System.out.println("ENTRE AL METODO");
         listaCombo = new ArrayList();
-        System.out.println("CODIGO :" +provincia.getCodprov());
         listaCombo = getFacade().listaDistrito(provincia.getCodprov());
-        System.out.println("DATOS :" +listaCombo.toString());
         return listaCombo;
     }
 
