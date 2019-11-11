@@ -151,7 +151,7 @@ public class ProvinciaController implements Serializable {
             return key;
         }
 
-        String getStringKey(java.math.BigDecimal value) {
+        String getStringKey(int value) {
             StringBuilder sb = new StringBuilder();
             sb.append(value);
             return sb.toString();

@@ -1,9 +1,11 @@
 
 package modelo.dao;
 
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import modelo.entity.Distrito;
 
 
@@ -20,6 +22,13 @@ public class DistritoFacade extends AbstractFacade<Distrito> {
 
     public DistritoFacade() {
         super(Distrito.class);
+    }
+    
+    public List<Distrito> listaDistrito(int Codigo) {
+        String jpql = "SELECT d FROM Distrito JOIN d.codprov p WHERE p.codprov = :codprov";
+        Query cq = em.createQuery(jpql, super.getClass());
+        cq.setParameter("codprov", Codigo);
+        return cq.getResultList();
     }
     
 }

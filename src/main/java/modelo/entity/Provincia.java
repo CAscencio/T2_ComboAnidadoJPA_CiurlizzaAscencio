@@ -8,6 +8,7 @@ package modelo.entity;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -42,7 +43,7 @@ public class Provincia implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "CODPROV")
-    private BigDecimal codprov;
+    private int codprov;
     
     @Basic(optional = false)
     @NotNull
@@ -60,20 +61,20 @@ public class Provincia implements Serializable {
     public Provincia() {
     }
 
-    public Provincia(BigDecimal codprov) {
+    public Provincia(int codprov) {
         this.codprov = codprov;
     }
 
-    public Provincia(BigDecimal codprov, String nomprov) {
+    public Provincia(int codprov, String nomprov) {
         this.codprov = codprov;
         this.nomprov = nomprov;
     }
 
-    public BigDecimal getCodprov() {
+    public int getCodprov() {
         return codprov;
     }
 
-    public void setCodprov(BigDecimal codprov) {
+    public void setCodprov(int codprov) {
         this.codprov = codprov;
     }
 
@@ -104,23 +105,42 @@ public class Provincia implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 0;
-        hash += (codprov != null ? codprov.hashCode() : 0);
+        int hash = 5;
+        hash = 53 * hash + this.codprov;
+        hash = 53 * hash + Objects.hashCode(this.nomprov);
+        hash = 53 * hash + Objects.hashCode(this.coddepart);
+        hash = 53 * hash + Objects.hashCode(this.distritoList);
         return hash;
     }
 
     @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Provincia)) {
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
             return false;
         }
-        Provincia other = (Provincia) object;
-        if ((this.codprov == null && other.codprov != null) || (this.codprov != null && !this.codprov.equals(other.codprov))) {
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Provincia other = (Provincia) obj;
+        if (this.codprov != other.codprov) {
+            return false;
+        }
+        if (!Objects.equals(this.nomprov, other.nomprov)) {
+            return false;
+        }
+        if (!Objects.equals(this.coddepart, other.coddepart)) {
+            return false;
+        }
+        if (!Objects.equals(this.distritoList, other.distritoList)) {
             return false;
         }
         return true;
     }
+
+    
 
     @Override
     public String toString() {

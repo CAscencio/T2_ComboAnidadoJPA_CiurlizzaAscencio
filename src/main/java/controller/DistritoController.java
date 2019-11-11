@@ -6,6 +6,7 @@ import controller.util.JsfUtil.PersistAction;
 import modelo.dao.DistritoFacade;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -18,6 +19,7 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
+import modelo.entity.Provincia;
 
 @Named("distritoController")
 @SessionScoped
@@ -27,6 +29,10 @@ public class DistritoController implements Serializable {
     private modelo.dao.DistritoFacade ejbFacade;
     private List<Distrito> items = null;
     private Distrito selected;
+    
+    private Provincia provincia = new Provincia();
+    
+    private List<Distrito> listaCombo;
 
     public DistritoController() {
     }
@@ -121,6 +127,24 @@ public class DistritoController implements Serializable {
         return getFacade().findAll();
     }
 
+    public List<Distrito> getListaCombo() {
+        return listaCombo;
+    }
+
+    public void setListaCombo(List<Distrito> listaCombo) {
+        this.listaCombo = listaCombo;
+    }
+
+    public Provincia getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(Provincia provincia) {
+        this.provincia = provincia;
+    }
+    
+    
+
     @FacesConverter(forClass = Distrito.class)
     public static class DistritoControllerConverter implements Converter {
 
@@ -160,6 +184,15 @@ public class DistritoController implements Serializable {
             }
         }
 
+    }
+    
+    public List<Distrito> dataDistrito() {
+        System.out.println("ENTRE AL METODO");
+        listaCombo = new ArrayList();
+        System.out.println("CODIGO :" +provincia.getCodprov());
+        listaCombo = getFacade().listaDistrito(provincia.getCodprov());
+        System.out.println("DATOS :" +listaCombo.toString());
+        return listaCombo;
     }
 
 }
